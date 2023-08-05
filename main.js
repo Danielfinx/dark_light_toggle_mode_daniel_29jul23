@@ -4,13 +4,14 @@ $(document).ready(function () {
         $("body").toggleClass("change-background");
         $(this).css("border", "1px solid #f5f5f5");
 
-        // toggle buttom text
+        // toggle button text
         $("span").text(
             $("span").text() == "Light Mode" ? "Dark Mode"
-            : "LightMode"
+            : "Light Mode"
         );
     });
-    $(#"toggle-btn").click(function() {
-        
+    $("#toggle-btn").click(function () {
+        let icon= $(this).find("ion-icon");
+        icon.attr("name") == "moon" ? icon.attr("name", "sunny") : icon.attr("name", "moon");
     })
 });
